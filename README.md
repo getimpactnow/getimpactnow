@@ -1,4 +1,4 @@
-# Nesta and DFINITY powering [get.impact.now](https://getimpactnow.org)
+# [get.impact.now](https://getimpactnow.org) powered by [NESTA](https://media.nesta.org.uk/documents/digital_democracy.pdf) and [DFINITY](https://dfinity.org/)
 
 Digital technologies have transformed the way we live and work. They’ve
 revolutionised industries as diverse as media, retail, education and financial
@@ -10,5 +10,3 @@ customer experience. Changes in the social field have been equally dramatic.
 Think of education; remote learning is reshaping the higher education landscape,
 offering access to some of the world’s best universities to anyone with a laptop
 and internet connection.
-
-[Read more about nesta](https://media.nesta.org.uk/documents/digital_democracy.pdf)
