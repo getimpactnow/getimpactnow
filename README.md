@@ -1,4 +1,4 @@
-# Nesta Meets DFINITYs Internet Computer and powers GetImpactNow.org
+# Nesta and DFINITY powering [get.impact.now](getimpactnow.orgj)
 
 Digital technologies have transformed the way we live and work. They’ve
 revolutionised industries as diverse as media, retail, education and financial
