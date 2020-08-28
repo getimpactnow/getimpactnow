@@ -1,4 +1,4 @@
-# Nesta and DFINITY powering [get.impact.now](getimpactnow.orgj)
+# Nesta and DFINITY powering [get.impact.now](https://getimpactnow.org)
 
 Digital technologies have transformed the way we live and work. They’ve
 revolutionised industries as diverse as media, retail, education and financial
