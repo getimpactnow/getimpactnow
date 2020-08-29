@@ -1,17 +1,15 @@
-# [get.impact.now][gin] powered by [NESTA][nesta] and [DFINITY][dfinity]
+# [get.impact.now][gin] powered by [DFINITY][dfinity]
 
-## Quick intro about Nesta
+## The Idea
+We want to implement the findings of 
+“Digital Democracy – The tools transforming political engagement”
+in a Unique Politics Network Application.
 
-Digital technologies have transformed the way we live and work. They’ve
-revolutionised industries as diverse as media, retail, education and financial
-services. In some cases, digital technologies have disrupted whole industries –
-forcing companies to forge new business models and develop new service
-offerings. In other industries, such as financial services and retail, while the
-business model has remained broadly the same, digital tools have transformed the
-customer experience. Changes in the social field have been equally dramatic.
-Think of education; remote learning is reshaping the higher education landscape,
-offering access to some of the world’s best universities to anyone with a laptop
-and internet connection.
+Credits go to the authors 
+Julie Simon, Theo Bass, Victoria Boelman and Geoff Mulgan 
+for their groundbreaking work.
+
+[Read their document](https://media.nesta.org.uk/documents/digital_democracy.pdf)
 
 ## Build On The Internet. No Dependencies.
 
