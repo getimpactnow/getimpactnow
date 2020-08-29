@@ -7,7 +7,7 @@
     "get_impact_now_assets": {
       "dependencies": ["get_impact_now"],
       "frontend": {
-        "entrypoint": "src/get_impact_now_assets/public/index.jsx"
+        "entrypoint": "src/get_impact_now_assets/public/index.tsx"
       },
       "source": [
         "src/get_impact_now_assets/assets",
