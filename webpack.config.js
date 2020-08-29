@@ -41,7 +41,7 @@ function generateWebpackConfigForCanister(name, info) {
     },
     devtool: "source-map",
     optimization: {
-      minimize: true,
+      minimize: false,
       minimizer: [
         new TerserPlugin({
           cache: true,
@@ -65,7 +65,13 @@ function generateWebpackConfigForCanister(name, info) {
     // tutorial, uncomment the following lines:
     module: {
       rules: [
-        { test: /\.(js|ts)x?$/, loader: "ts-loader" },
+        {
+          test: /\.(js|ts)x?$/,
+          loader: "ts-loader",
+          include: [
+            path.resolve(__dirname, "src/get_impact_now_assets/public/"),
+          ],
+        },
         //  { test: /\.css$/, use: ['style-loader','css-loader'] }
       ],
     },
