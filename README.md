@@ -1,13 +1,12 @@
 # [get.impact.now][gin] powered by [DFINITY][dfinity]
 
 ## The Idea
-We want to implement the findings of 
-“Digital Democracy – The tools transforming political engagement”
-in a Unique Politics Network Application.
 
-Credits go to the authors 
-Julie Simon, Theo Bass, Victoria Boelman and Geoff Mulgan 
-for their groundbreaking work.
+We want to implement the findings of “Digital Democracy – The tools transforming
+political engagement” in a Unique Politics Network Application.
+
+Credits go to the authors Julie Simon, Theo Bass, Victoria Boelman and Geoff
+Mulgan for their groundbreaking work.
 
 [Read their document](https://media.nesta.org.uk/documents/digital_democracy.pdf)
 
@@ -34,6 +33,38 @@ DFINITYs mission is:
 > a new technology stack that is unhackable, fast, scales to billions of users
 > around the world, and supports a new kind of autonomous software that promises
 > to reverse Big Tech’s monopolization of the internet.
+
+## Project setup
+
+### Start the local IC:
+
+```bash
+dfx start
+```
+
+### Install the project to local IC:
+
+```bash
+make all
+```
+
+### Get Frontend canister id:
+
+```bash
+make get_frontend_canister_id
+```
+
+### Learn details about DFX
+
+- [Quick Start](https://sdk.dfinity.org/docs/quickstart/quickstart.html)
+- [SDK Developer Tools](https://sdk.dfinity.org/docs/developers-guide/sdk-guide.html)
+- [Motoko Programming Language Guide](https://sdk.dfinity.org/docs/language-guide/motoko.html)
+- [Motoko Language Quick Reference](https://sdk.dfinity.org/docs/language-guide/language-manual.html)
+
+```bash
+dfx help
+dfx config --help
+```
 
 ## Reference
 
