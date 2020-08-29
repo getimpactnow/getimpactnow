@@ -7,15 +7,25 @@
     "build": "webpack"
   },
   "devDependencies": {
+    "@babel/core": "7.11.4",
+    "@babel/preset-env": "7.11.0",
+    "@babel/preset-typescript": "7.10.4",
     "@dfinity/agent": "0.6.4",
+    "@types/react-router-dom": "5.1.5",
+    "babel-loader": "8.1.0",
     "terser-webpack-plugin": "2.2.2",
     "ts-loader": "8.0.3",
     "typescript": "4.0.2",
-    "webpack": "4.41.3",
+    "webpack": "4.44.1",
     "webpack-cli": "3.3.10"
   },
   "dependencies": {
+    "@chakra-ui/core": "0.8.0",
+    "@emotion/core": "10.0.35",
+    "@emotion/styled": "10.0.27",
+    "emotion-theming": "10.0.27",
     "react": "16.13.1",
-    "react-dom": "16.13.1"
+    "react-dom": "16.13.1",
+    "react-router-dom": "5.2.0"
   }
 }
