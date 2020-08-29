@@ -1,4 +1,4 @@
-all: webpack create_canister build_canister install_canister
+all: webpack start_local_ic create_canister build_canister install_canister
 
 build_canister:
 	dfx build
@@ -15,3 +15,11 @@ get_frontend_canister_id:
 webpack: node_modules/.bin/webpack
 node_modules/.bin/webpack:
 	yarn install
+
+start_local_ic: dfx
+	dfx stop
+	dfx start --background
+
+dfx: /usr/local/bin/dfx
+/usr/local/bin/dfx:
+	sh -ci "$(curl -fsSL https://sdk.dfinity.org/install.sh)"
