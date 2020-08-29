@@ -1,5 +1,7 @@
 all: webpack start_local_ic create_canister build_canister install_canister
 
+reinstall: build_canister install_canister
+
 build_canister:
 	dfx build
 
