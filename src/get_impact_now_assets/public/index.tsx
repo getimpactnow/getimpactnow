@@ -3,7 +3,7 @@ import get_impact_now from "ic:canisters/get_impact_now";
 import * as React from "react";
 import { render } from "react-dom";
 
-const MyHello: React.FC = () => {
+const GetImpactNow: React.FC = () => {
   const [name, setName] = React.useState("");
   const [message, setMessage] = React.useState("");
 
@@ -17,7 +17,6 @@ const MyHello: React.FC = () => {
       <div style={{ backgroundColor: "yellow" }}>
         <p>Greetings, from DFINITY!</p>
         <p>
-          {" "}
           Type your message in the Name input field, then click{" "}
           <b> Get Greeting</b> to display the result.
         </p>
@@ -37,4 +36,4 @@ const MyHello: React.FC = () => {
   );
 };
 
-render(<MyHello />, document.getElementById("app"));
+render(<GetImpactNow />, document.getElementById("app"));
