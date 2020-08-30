@@ -1,7 +1,5 @@
 import React from "react";
 import Box, { BoxProps } from "@chakra-ui/core/dist/Box";
-import Icon from "@chakra-ui/core/dist/Icon";
-import Flex from "@chakra-ui/core/dist/Flex";
 import IconButton from "@chakra-ui/core/dist/IconButton";
 import { Stack } from "@chakra-ui/core";
 
