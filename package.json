@@ -8,7 +8,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.11.4",
-    "@babel/preset-env": "7.11.0",
+    "@babel/preset-env": "7.11.5",
     "@babel/preset-typescript": "7.10.4",
     "@dfinity/agent": "0.6.4",
     "@types/react-router-dom": "5.1.5",
