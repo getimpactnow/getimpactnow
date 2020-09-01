@@ -874,10 +874,10 @@
     toasted-notes "3.2.0"
     use-dark-mode "2.3.1"
 
-"@dfinity/agent@0.6.4":
-  version "0.6.4"
-  resolved "https://registry.yarnpkg.com/@dfinity/agent/-/agent-0.6.4.tgz#91c0d08761a4852fa34d5968e22acf1a9340b214"
-  integrity sha512-ytRxbMKhtjkY7cix9WEGqA+AF/YpfeuViqV2iMqLkIMp12iO4cbdxLeZ0f9qbdHyij7U8LbbRkU1Ec3jaLxcYQ==
+"@dfinity/agent@0.6.5":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@dfinity/agent/-/agent-0.6.5.tgz#46de39f5c50752b406c9edaa4f9a64982e3d1c04"
+  integrity sha512-Sqawwautl/oEaYXhmW4D870H8ckUPs9VNAZaGK4USEz+YVOGkD6GcINfI3lDBk4DYC3Z9tcLaiD/RrpHNt38KA==
   dependencies:
     base32.js "^0.1.0"
     bignumber.js "^9.0.0"
