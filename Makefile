@@ -9,10 +9,10 @@ create_canister:
 	dfx canister create --all
 	
 install_canister:
-	dfx canister install --all -m reinstall
+	dfx canister install --all -m upgrade
 
-get_frontend_canister_id:
-	dfx canister id get_impact_now_assets
+open_frontend:
+	open http://localhost:8000/?canisterId=$(shell dfx canister id get_impact_now_assets)
 
 webpack: node_modules/.bin/webpack
 node_modules/.bin/webpack:
