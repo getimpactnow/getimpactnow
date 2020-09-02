@@ -10,7 +10,7 @@
     "@babel/core": "7.11.4",
     "@babel/preset-env": "7.11.0",
     "@babel/preset-typescript": "7.10.4",
-    "@dfinity/agent": "0.6.4",
+    "@dfinity/agent": "0.6.6",
     "@types/react-router-dom": "5.1.5",
     "babel-loader": "8.1.0",
     "terser-webpack-plugin": "2.2.2",
