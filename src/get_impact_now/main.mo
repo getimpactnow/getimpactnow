@@ -1,20 +1,30 @@
-import utils "utils";
-import types "types";
+import Option "mo:base/Option";
+import Utils "./utils";
+import Database "./database";
+import Types "./types";
 
-type Issue = types.Issue;
+type Issue = Types.Issue;
 
-actor IssueAssistant {
+actor GetImpactNow {
+  var db: Database.IssueDB = Database.IssueDB();
 
-  var issues : [Issue] = [];
-  var nextId : Nat = 1;
-
-  public query func getIssues () : async [Issue] {
-   issues 
+  public query func getIssue(id: Nat): async ?Utils.ImmutableIssue {
+    let issue = db.findOne(id);
+    switch (issue) {
+      case null return null;
+      case (?actualIssue) return Utils.toImmutableIssue(actualIssue);
+    }
   };
 
-  public func addIssue (description : Text) : async () {
-    issues := utils.add(issues, description, nextId);
-    nextId += 1;
+  public query func getIssues(): async [Utils.ImmutableIssue] {
+    db.findMany();
   };
 
+  public func addIssue(description : Text): async () {
+    db.createOne(db.nextIssueId, description);
+  };
+
+  public func addDebate(issueId: Nat, thesis: Text): async () {
+    db.createDebate(issueId, thesis);
+  }
 };

@@ -7,9 +7,12 @@ import { TopBar } from "../../components/organisms/top-bar";
 import { Card } from "../../components/atoms/card";
 import Grid from "@chakra-ui/core/dist/Grid";
 import { AddIssueFab } from "../../modules/issues/add-issue-fab";
+import { Link } from "react-router-dom";
 
 export const Home: React.FC = () => {
   const [issues, setIssues] = React.useState([]);
+  console.log(">> ", { issues });
+
   const updateIssues = React.useCallback(async () => {
     const issues = await get_impact_now.getIssues();
     setIssues(issues);
@@ -34,7 +37,9 @@ export const Home: React.FC = () => {
           padding="1rem"
         >
           {issues.map((issue) => (
-            <Card backgroundColor="green.800">{issue.description}</Card>
+            <Link to={`/issues/${issue.id}`}>
+              <Card backgroundColor="green.800">{issue.description}</Card>
+            </Link>
           ))}
         </Grid>
       </Flex>

@@ -2,12 +2,20 @@ all: webpack start_local_ic create_canister build_canister install_canister
 
 reinstall: build_canister install_canister
 
+reinstall_backend: build_backend install_canister_backend
+
+build_backend:
+	dfx build --skip-frontend
+
 build_canister:
 	dfx build
 
 create_canister:
 	dfx canister create --all
 	
+install_canister_backend:
+	dfx canister install get_impact_now -m reinstall
+
 install_canister:
 	dfx canister install --all -m upgrade
 
