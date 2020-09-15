@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@chakra-ui/core": "0.8.0",
+    "@dfinity/agent": "0.6.7",
     "@emotion/core": "10.0.35",
     "@emotion/styled": "10.0.27",
     "emotion-theming": "10.0.27",
@@ -19,7 +20,9 @@
     "start": "NODE_ENV=development && craco start",
     "build": "CI= craco build && webpack",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "autobuild": "make reinstall_frontend",
+    "watch": "node watch.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -47,6 +50,8 @@
     "@types/react-dom": "^16.9.0",
     "@types/react-helmet": "6.1.0",
     "@types/react-router-dom": "5.1.5",
+    "chokidar": "3.4.2",
+    "framer-motion": "2.6.13",
     "typescript": "~3.7.2",
     "webpack-cli": "^3.3.12"
   }

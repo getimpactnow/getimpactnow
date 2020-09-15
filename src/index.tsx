@@ -7,6 +7,7 @@ import { IssuePage } from "./pages/home/issue";
 import { RecoilRoot } from "recoil";
 import Text from "@chakra-ui/core/dist/Text";
 import BasePageTemplate from "./components/templates/base-page-template";
+import { Profile } from "./pages/profile";
 
 const GetImpactNow: React.FC = () => {
   return (
@@ -22,7 +23,7 @@ const GetImpactNow: React.FC = () => {
             </Route>
             <Route path="/profile">
               <BasePageTemplate>
-                <Text>Profile</Text>
+                <Profile />
               </BasePageTemplate>
             </Route>
             <Route path="/politician">
@@ -42,4 +43,4 @@ const GetImpactNow: React.FC = () => {
   );
 };
 
-render(<GetImpactNow />, document.getElementById("app"));
+render(<GetImpactNow />, document.getElementById("root"));

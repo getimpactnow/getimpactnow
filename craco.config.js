@@ -32,7 +32,7 @@ module.exports = {
             plugins: [
               ...webpackConfig.plugins,
               new webpack.ProvidePlugin({
-                // ic: [path.resolve(path.join(__dirname, "ic.js")), "ic"],
+                ic: [path.resolve(path.join(__dirname, "ic.js")), "ic"],
               }),
             ],
             resolve: {

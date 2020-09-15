@@ -1,6 +1,5 @@
 import React from "react";
 import Flex from "@chakra-ui/core/dist/Flex";
-import Box from "@chakra-ui/core/dist/Box";
 import Text from "@chakra-ui/core/dist/Text";
 import { MenuHeadline } from "../atoms/menu-headline";
 import Stack from "@chakra-ui/core/dist/Stack";

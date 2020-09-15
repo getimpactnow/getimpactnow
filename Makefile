@@ -23,8 +23,11 @@ install_canister_backend:
 install_canister_frontend:
 	dfx canister install getimpactnow_assets -m reinstall
 
+reinstall_canister:
+	dfx canister install --all -m reinstall
+
 install_canister:
-	dfx canister install --all -m upgrade
+	dfx canister install --all
 
 open_frontend:
 	open http://localhost:8000/?canisterId=$(shell dfx canister id get_impact_now_assets)
@@ -36,6 +39,14 @@ node_modules/.bin/webpack:
 start_local_ic: dfx
 	dfx stop
 	dfx start --background
+
+clean:
+	dfx stop
+	rm -rf .dfx
+	dfx start --clean --background
+	make create_canister
+	make build_canister
+	make install_canister
 
 dfx: /usr/local/bin/dfx
 /usr/local/bin/dfx:
