@@ -3,7 +3,10 @@ import React from "react";
 import Box from "@chakra-ui/core/dist/Box";
 import { usePreferredColorScheme } from "../../modules/theme/hooks";
 
-export const Wrapper: React.FC<BoxProps> = ({ children, ...boxProps }) => {
+export const ColorModeWrapper: React.FC<BoxProps> = ({
+  children,
+  ...boxProps
+}) => {
   const { theme, colorMode } = usePreferredColorScheme() as {
     theme: any;
     colorMode: "light" | "dark";

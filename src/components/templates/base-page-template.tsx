@@ -3,7 +3,7 @@ import { ThemeProvider, CSSReset, ColorModeProvider } from "@chakra-ui/core";
 import { Helmet } from "react-helmet";
 import HeaderNav from "../organisms/Header";
 import theme from "../../modules/theme";
-import { Wrapper } from "../atoms/wrapper";
+import { ColorModeWrapper } from "../atoms/color-mode-wrapper";
 
 type LayoutProps = {
   noIndexNoFollow?: boolean;
@@ -35,10 +35,10 @@ const BasePageTemplate: React.FunctionComponent<LayoutProps> = ({
       </Helmet>
 
       <ColorModeProvider>
-        <Wrapper>
+        <ColorModeWrapper>
           <HeaderNav />
           {children}
-        </Wrapper>
+        </ColorModeWrapper>
       </ColorModeProvider>
       <CSSReset />
     </ThemeProvider>
