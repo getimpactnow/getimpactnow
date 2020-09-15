@@ -1,36 +1,29 @@
 {
   "canisters": {
-    "get_impact_now": {
-      "main": "src/get_impact_now/main.mo",
+    "issue": {
+      "main": "backend/issue/main.mo",
       "type": "motoko"
     },
-    "get_impact_now_assets": {
-      "dependencies": ["get_impact_now"],
+    "getimpactnow_assets": {
+      "dependencies": ["issue"],
       "frontend": {
-        "entrypoint": "src/get_impact_now_assets/public/index.tsx"
+        "entrypoint": "public/ic-injector.js"
       },
-      "source": [
-        "src/get_impact_now_assets/assets",
-        "dist/get_impact_now_assets/"
-      ],
+      "source": ["dist/getimpactnow_assets/", "build"],
       "type": "assets"
     }
   },
   "defaults": {
     "build": {
-      "packtool": ""
+      "output": "canisters/"
     }
   },
-  "dfx": "0.6.4",
   "networks": {
     "local": {
-      "bind": "127.0.0.1:8000",
+      "bind": "127.0.0.1:8888",
       "type": "ephemeral"
-    },
-    "tungsten": {
-      "providers": ["https://gw.dfinity.network"],
-      "type": "persistent"
     }
   },
+  "dfx": "0.6.7",
   "version": 1
 }

@@ -1,4 +1,6 @@
 const path = require("path");
+const fs = require("fs");
+const glob = require("glob");
 const TerserPlugin = require("terser-webpack-plugin");
 const dfxJson = require("./dfx.json");
 
@@ -26,6 +28,49 @@ const aliases = Object.entries(dfxJson.canisters).reduce(
   {}
 );
 
+function generateIcEntryPoint(name, info) {
+  const entryPointPath = path.join(__dirname, info.frontend.entrypoint);
+
+  const assets = glob.sync("build/static/js/*.js").sort((a, b) => {
+    a = path.basename(a);
+    b = path.basename(b);
+    if (a.startsWith("runtime")) {
+      return -1;
+    } else if (b.startsWith("main")) {
+      return 1;
+    } else {
+      return Number(a.substr(0, 1)) - Number(b.substr(0, 1));
+    }
+  });
+
+  const content = `
+import ${name} from "ic:canisters/${name}";
+
+console.log('test');
+
+(async () => {
+  const injectJsFiles = [];
+  
+  injectJsFiles.push(
+    ${assets.map(
+      (fileName) =>
+        `await ${name}.retrieve('static/js/${path.basename(fileName)}')`
+    )}
+  );
+  
+  injectJsFiles.forEach(content => {
+    const s = document.createElement("script");
+    s.type = 'text/javascript';
+    s.innerHTML = new TextDecoder().decode(new Uint8Array(content));
+    
+    document.body.appendChild(s);
+  });
+})();
+  `;
+
+  fs.writeFileSync(entryPointPath, content);
+}
+
 /**
  * Generate a webpack configuration for a canister.
  */
@@ -34,24 +79,22 @@ function generateWebpackConfigForCanister(name, info) {
     return;
   }
 
+  generateIcEntryPoint(name, info);
+
+  const entryPointPath = path.join(__dirname, info.frontend.entrypoint);
+
   return {
     mode: "production",
     entry: {
-      index: path.join(__dirname, info.frontend.entrypoint),
+      index: entryPointPath,
     },
     devtool: "source-map",
     optimization: {
-      minimize: false,
-      minimizer: [
-        new TerserPlugin({
-          cache: true,
-          parallel: true,
-        }),
-      ],
+      minimize: true,
+      minimizer: [new TerserPlugin()],
     },
     resolve: {
       alias: aliases,
-      extensions: ["*", ".js", ".jsx", "ts", ".tsx"],
     },
     output: {
       filename: "[name].js",
@@ -63,18 +106,12 @@ function generateWebpackConfigForCanister(name, info) {
     // webpack configuration. For example, if you are using React
     // modules and CSS as described in the "Adding a stylesheet"
     // tutorial, uncomment the following lines:
-    module: {
-      rules: [
-        {
-          test: /\.(js|ts)x?$/,
-          loader: "ts-loader",
-          include: [
-            path.resolve(__dirname, "src/get_impact_now_assets/public/"),
-          ],
-        },
-        //  { test: /\.css$/, use: ['style-loader','css-loader'] }
-      ],
-    },
+    // module: {
+    //  rules: [
+    //    { test: /\.(js|ts)x?$/, loader: "ts-loader" },
+    //    { test: /\.css$/, use: ['style-loader','css-loader'] }
+    //  ]
+    // },
     plugins: [],
   };
 }
