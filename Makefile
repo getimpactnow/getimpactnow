@@ -3,9 +3,13 @@ all: webpack start_local_ic create_canister build_canister install_canister
 reinstall: build_canister install_canister
 
 reinstall_backend: build_backend install_canister_backend
+reinstall_frontend: build_frontend install_canister_frontend
 
 build_backend:
 	dfx build --skip-frontend
+
+build_frontend:
+	dfx build getimpactnow_assets
 
 build_canister:
 	dfx build
@@ -15,6 +19,9 @@ create_canister:
 	
 install_canister_backend:
 	dfx canister install get_impact_now -m reinstall
+
+install_canister_frontend:
+	dfx canister install getimpactnow_assets -m reinstall
 
 install_canister:
 	dfx canister install --all -m upgrade
