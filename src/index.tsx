@@ -5,6 +5,8 @@ import { ThemeProvider, theme, CSSReset } from "@chakra-ui/core";
 import { Home } from "./pages/home";
 import { IssuePage } from "./pages/home/issue";
 import { RecoilRoot } from "recoil";
+import Text from "@chakra-ui/core/dist/Text";
+import BasePageTemplate from "./components/templates/base-page-template";
 
 const GetImpactNow: React.FC = () => {
   return (
@@ -14,10 +16,24 @@ const GetImpactNow: React.FC = () => {
         <Router>
           <Switch>
             <Route exact path="/">
-              <Home />
+              <BasePageTemplate>
+                <Home />
+              </BasePageTemplate>
+            </Route>
+            <Route path="/profile">
+              <BasePageTemplate>
+                <Text>Profile</Text>
+              </BasePageTemplate>
+            </Route>
+            <Route path="/politician">
+              <BasePageTemplate>
+                <Text>Politician</Text>
+              </BasePageTemplate>
             </Route>
             <Route path="/issues/:issueId">
-              <IssuePage />
+              <BasePageTemplate>
+                <IssuePage />
+              </BasePageTemplate>
             </Route>
           </Switch>
         </Router>
