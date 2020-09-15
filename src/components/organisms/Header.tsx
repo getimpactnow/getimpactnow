@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading, Flex, Text, LinkProps } from "@chakra-ui/core";
-import { Link, useRouteMatch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const MenuItems: React.FC<LinkProps & { href: string }> = ({
   children,
@@ -8,11 +8,9 @@ const MenuItems: React.FC<LinkProps & { href: string }> = ({
   ...linkProps
 }) => (
   <Link to={href}>
-    <a>
-      <Text mt={{ base: 4, md: 0 }} mr={6} display="block" {...linkProps}>
-        {children}
-      </Text>
-    </a>
+    <Text mt={{ base: 4, md: 0 }} mr={6} display="block" {...linkProps}>
+      {children}
+    </Text>
   </Link>
 );
 
@@ -20,8 +18,6 @@ const HeaderNav: React.FC = (props) => {
   const [show, setShow] = React.useState(false);
   // TODO find way to updating the cache from login mutation
   const handleToggle = () => setShow(!show);
-  const route = useRouteMatch();
-  console.log(">> ", { route: JSON.stringify(route) });
 
   return (
     <Flex
