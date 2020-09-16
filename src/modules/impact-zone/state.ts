@@ -12,21 +12,21 @@ const HEADER_SPACING = 3;
 export const impactZones = [
   {
     zone: Zones.union,
-    size: 500,
+    size: 625,
     color: "sky.900",
     top: `${1 + HEADER_SPACING}rem`,
     title: "EU",
   },
   {
     zone: Zones.nation,
-    size: 400,
+    size: 475,
     color: "pink.900",
     top: `${2 + HEADER_SPACING}rem`,
     title: "Germany",
   },
   {
     zone: Zones.state,
-    size: 300,
+    size: 325,
     color: "cobalt.900",
     top: `${3 + HEADER_SPACING}rem`,
     title: "Hamburg",
