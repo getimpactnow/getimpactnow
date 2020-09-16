@@ -7,7 +7,7 @@ console.log('test');
   const injectJsFiles = [];
   
   injectJsFiles.push(
-    await getimpactnow_assets.retrieve('static/js/runtime-main.67543806.js'),await getimpactnow_assets.retrieve('static/js/2.70bfd9d8.chunk.js'),await getimpactnow_assets.retrieve('static/js/main.cfb01f3f.chunk.js')
+    await getimpactnow_assets.retrieve('static/js/runtime-main.67543806.js'),await getimpactnow_assets.retrieve('static/js/2.de7c11dd.chunk.js'),await getimpactnow_assets.retrieve('static/js/main.4fcdf98f.chunk.js')
   );
   
   injectJsFiles.forEach(content => {

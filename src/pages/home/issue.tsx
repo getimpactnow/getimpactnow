@@ -1,4 +1,3 @@
-// @ts-ignore
 import get_impact_now from "ic:canisters/issue";
 import React from "react";
 import Flex from "@chakra-ui/core/dist/Flex";

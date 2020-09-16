@@ -15,19 +15,20 @@ const LinkStyled = styled(Link)`
 
 export const Zone: React.FC<
   BoxProps & MotionProps & { isSelected: boolean; id: string; size: number }
-> = ({ isSelected, id, size, ...animatedCircleProps }) => {
+> = ({ isSelected, id, size, onClick, ...animatedCircleProps }) => {
   const zIndex = useMotionValue(isSelected ? 2 : 0);
   console.log(">> ", { zIndex, size, isSelected });
   return (
     <Box position="absolute" display="flex">
       <AnimatedCircle
+        onClick={onClick}
         isSelected={isSelected}
         width={isSelected ? "100vw" : size}
         height={isSelected ? "100vh" : size}
         {...animatedCircleProps}
         borderRadius={isSelected ? "0" : "50%"}
       />
-      {!isSelected && <LinkStyled to={`/profile/${id}`} />}
+      {!isSelected && <LinkStyled onClick={onClick} to={`/profile/${id}`} />}
     </Box>
   );
 };

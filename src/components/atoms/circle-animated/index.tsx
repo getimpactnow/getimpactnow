@@ -21,7 +21,6 @@ export const AnimatedCircle: React.FC<
       whileTap={{ scale: 0.99, borderColor: "rgba(255, 255, 255, 1)" }}
       border="1px"
       borderColor="whiteAlpha.300"
-      margin="0.5rem" // growing space
       {...animatedCircleProps}
     />
   );

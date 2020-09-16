@@ -1,7 +1,6 @@
 import React from "react";
 import { ThemeProvider, CSSReset, ColorModeProvider } from "@chakra-ui/core";
 import { Helmet } from "react-helmet";
-import HeaderNav from "../organisms/Header";
 import theme from "../../modules/theme";
 import { ColorModeWrapper } from "../atoms/color-mode-wrapper";
 
@@ -11,7 +10,7 @@ type LayoutProps = {
   metaDescription?: string;
 };
 
-const BasePageTemplate: React.FunctionComponent<LayoutProps> = ({
+const SimplePage: React.FunctionComponent<LayoutProps> = ({
   children,
   noIndexNoFollow,
   title,
@@ -35,14 +34,11 @@ const BasePageTemplate: React.FunctionComponent<LayoutProps> = ({
       </Helmet>
 
       <ColorModeProvider>
-        <ColorModeWrapper>
-          <HeaderNav />
-          {children}
-        </ColorModeWrapper>
+        <ColorModeWrapper>{children}</ColorModeWrapper>
       </ColorModeProvider>
       <CSSReset />
     </ThemeProvider>
   );
 };
 
-export default BasePageTemplate;
+export default SimplePage;
