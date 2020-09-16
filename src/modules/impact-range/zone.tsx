@@ -15,11 +15,11 @@ const LinkStyled = styled(Link)`
 
 export const Zone: React.FC<
   BoxProps & MotionProps & { isSelected: boolean; id: string; size: number }
-> = ({ isSelected, id, size, onClick, ...animatedCircleProps }) => {
+> = ({ isSelected, id, size, onClick, top, ...animatedCircleProps }) => {
   const zIndex = useMotionValue(isSelected ? 2 : 0);
   console.log(">> ", { zIndex, size, isSelected });
   return (
-    <Box position="absolute" display="flex">
+    <Box position="absolute" display="flex" top={top}>
       <AnimatedCircle
         onClick={onClick}
         isSelected={isSelected}

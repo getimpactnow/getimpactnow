@@ -12,7 +12,8 @@ export const ImpactSelector: React.FC = () => {
 
   console.log(">> ", { zone });
   return (
-    <Box>
+    <Box position="relative">
+      <Text>get.impact.now</Text>
       <ImpactZonesNav />
       <Text onClick={() => setZone("")}>Active Zone: {zone}</Text>
       {/* <VotingSlider /> */}
