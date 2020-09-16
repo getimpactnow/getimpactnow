@@ -1,46 +1,10 @@
 import React from "react";
 import Flex from "@chakra-ui/core/dist/Flex";
 import { useRecoilState } from "recoil";
-import { impactZone } from "./state";
+import { impactZone, impactZones } from "./state";
 import { Avatar } from "../../components/atoms/avatar";
 import { Route, RouteComponentProps } from "react-router-dom";
 import { Zone } from "./zone";
-
-enum Zones {
-  region = "region",
-  state = "state",
-  nation = "nation",
-  union = "union",
-}
-
-const HEADER_SPACING = 3;
-
-const impactZones = [
-  {
-    range: Zones.union,
-    size: 500,
-    color: "sky.900",
-    top: `${1 + HEADER_SPACING}rem`,
-  },
-  {
-    range: Zones.nation,
-    size: 400,
-    color: "pink.900",
-    top: `${2 + HEADER_SPACING}rem`,
-  },
-  {
-    range: Zones.state,
-    size: 300,
-    color: "cobalt.900",
-    top: `${3 + HEADER_SPACING}rem`,
-  },
-  {
-    range: Zones.region,
-    size: 200,
-    color: "lilac.900",
-    top: `${4 + HEADER_SPACING}rem`,
-  },
-];
 
 export const ImpactZones: React.FC<RouteComponentProps<{ id: string }>> = ({
   match,
@@ -58,14 +22,14 @@ export const ImpactZones: React.FC<RouteComponentProps<{ id: string }>> = ({
     >
       {impactZones.map((zone) => (
         <Zone
-          isSelected={match.params.id === zone.range}
-          id={zone.range}
-          key={zone.range}
+          isSelected={match.params.id === zone.zone}
+          zone={zone.zone}
+          key={zone.zone}
           top={zone.top}
           size={zone.size}
           onClick={() => {
-            console.log(">> onClick", { zone: zone.range });
-            setZone(zone.range);
+            console.log(">> onClick", { zone: zone.zone });
+            setZone(zone.zone);
           }}
           backgroundColor={zone.color}
         />
