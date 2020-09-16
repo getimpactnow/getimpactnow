@@ -14,10 +14,7 @@ export const Zone: React.FC<
 
   console.log(">> Zone", { zIndex, isSelected });
   return (
-    <motion.div
-      style={{ top: topPosition, position: "absolute", zIndex }}
-      // layoutTransition={isSelected ? openSpring : closeSpring}
-    >
+    <motion.div style={{ top: topPosition, position: "absolute", zIndex }}>
       <Link onClick={onClick} to={isSelected ? "/profile" : `/profile/${id}`}>
         <AnimatedCircle
           isSelected={isSelected}
