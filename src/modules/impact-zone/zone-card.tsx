@@ -22,7 +22,7 @@ export const ZoneCard: React.FC<ZoneCardProps> = ({ zoneId }) => {
       alignItems="center"
     >
       <Box>
-        {zoneId}: {zone.title}
+        in {zoneId}: {zone.title}
       </Box>
     </Flex>
   );
