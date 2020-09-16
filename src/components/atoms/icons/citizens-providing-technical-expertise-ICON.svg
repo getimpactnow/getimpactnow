@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg width="100%" height="100%" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+<svg width="100%" height="100%" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"  style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
     <g transform="matrix(1,0,0,1,-0.6296,-361)">
-        <g id="Citizens-providing-technical-expertise---ICON" serif:id="Citizens providing technical expertise – ICON" transform="matrix(0.784615,0,0,0.799632,-220.632,337.634)">
+        <g id="Citizens-providing-technical-expertise---ICON" transform="matrix(0.784615,0,0,0.799632,-220.632,337.634)">
             <rect x="282" y="29.221" width="65" height="63.779" style="fill:none;"/>
             <clipPath id="_clip1">
                 <rect x="282" y="29.221" width="65" height="63.779"/>
             </clipPath>
             <g clip-path="url(#_clip1)">
-                <g id="Citizens-providing-technical-expertise-Icon" serif:id="Citizens providing technical expertise Icon" transform="matrix(1.27451,0,0,1.25057,-236.088,-116.137)">
+                <g id="Citizens-providing-technical-expertise-Icon" transform="matrix(1.27451,0,0,1.25057,-236.088,-116.137)">
                     <g transform="matrix(1,0,0,1,452.861,167.245)">
                         <path d="M0,-51.024L-41.721,-51.024C-44.29,-51.024 -46.373,-48.942 -46.373,-46.373L-46.373,-4.652C-46.373,-2.083 -44.29,0 -41.721,0L0,0C2.569,0 4.651,-2.083 4.651,-4.652L4.651,-46.373C4.651,-48.942 2.569,-51.024 0,-51.024M-3.934,-19.486C-3.711,-19.014 -3.224,-18.369 -3.162,-17.857C-3.106,-17.385 -3.857,-17.093 -3.669,-16.838C-2.607,-15.397 -3.739,-14.624 -3.739,-14.624C-4.412,-14.314 -3.941,-10.879 -4.246,-10.05C-4.853,-8.402 -6.005,-8.262 -7.557,-8.199C-10.233,-8.091 -12.634,-9.249 -14.688,-6.944C-15.141,-6.435 -15.471,-5.857 -15.732,-5.242C-16.015,-4.577 -16.682,-4.157 -17.405,-4.157L-34.996,-4.157C-36.464,-4.157 -37.337,-5.796 -36.522,-7.016C-35.685,-8.268 -34.988,-9.334 -34.967,-9.378C-34.05,-11.314 -33.739,-13.853 -34.271,-15.936C-35.389,-20.314 -38.803,-23.347 -38.76,-28.271C-38.708,-34.258 -35.346,-40.983 -30.094,-43.984C-23.885,-47.533 -14.199,-46.051 -8.92,-41.422C-6.999,-39.737 -5.645,-37.553 -4.962,-35.092C-4.585,-33.733 -4.265,-32.08 -4.414,-30.665C-4.502,-29.823 -4.986,-29.137 -4.784,-28.246C-4.065,-25.083 2.886,-21.171 -3.934,-19.486" style="fill:rgb(160,145,41);fill-rule:nonzero;"/>
                     </g>
