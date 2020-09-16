@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,0,-448.391)">
+        <g id="Deliberation---ICON" serif:id="Deliberation – ICON" transform="matrix(0.784615,0,0,0.799632,-221.262,425.025)">
+            <rect x="282" y="29.221" width="65" height="63.779" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="282" y="29.221" width="65" height="63.779"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g transform="matrix(1.27451,0,0,1.25057,341.088,93.015)">
+                    <g id="Deliberation-Icon" serif:id="Deliberation Icon">
+                        <path d="M0,-51.024L-41.721,-51.024C-44.29,-51.024 -46.373,-48.942 -46.373,-46.373L-46.373,-4.651C-46.373,-2.083 -44.29,0 -41.721,0L0,0C2.569,0 4.651,-2.083 4.651,-4.651L4.651,-46.373C4.651,-48.942 2.569,-51.024 0,-51.024M-28.783,-9.06C-29.423,-9.06 -30.047,-9.106 -30.662,-9.173L-35.337,-4.498L-35.337,-10.385C-39.406,-12.15 -42.159,-15.5 -42.159,-19.35C-42.159,-25.033 -36.17,-29.64 -28.783,-29.64C-21.396,-29.64 -15.408,-25.033 -15.408,-19.35C-15.408,-13.667 -21.396,-9.06 -28.783,-9.06M-6.345,-28.641L-6.345,-23.416L-10.494,-27.565C-11.04,-27.506 -11.594,-27.464 -12.161,-27.464C-18.717,-27.464 -24.031,-31.553 -24.031,-36.596C-24.031,-41.64 -18.717,-45.728 -12.161,-45.728C-5.606,-45.728 -0.291,-41.64 -0.291,-36.596C-0.291,-33.18 -2.734,-30.207 -6.345,-28.641" style="fill:rgb(238,69,96);fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
