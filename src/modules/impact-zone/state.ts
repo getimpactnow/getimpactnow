@@ -1,4 +1,4 @@
-import { atom } from "recoil";
+import { atom, selector } from "recoil";
 
 enum Zones {
   region = "region",
@@ -40,7 +40,15 @@ export const impactZones = [
   },
 ];
 
-export const impactZone = atom({
-  key: "impactZone", // unique ID (with respect to other atoms/selectors)
+export const activeZoneId = atom({
+  key: "activeZoneId", // unique ID (with respect to other atoms/selectors)
   default: "", //
+});
+
+export const activeZone = selector({
+  key: "activeZone", // unique ID (with respect to other atoms/selectors)
+  get: ({ get }) => {
+    const id = get(activeZoneId);
+    return impactZones.find((zone) => zone.zone === id);
+  },
 });

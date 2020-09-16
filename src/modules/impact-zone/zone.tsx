@@ -29,7 +29,7 @@ export const Zone: React.FC<
           {...animatedCircleProps}
           borderRadius={isSelected ? "0" : "50%"}
         >
-          {isSelected && <ZoneCard zone={zone} />}
+          {isSelected && <ZoneCard zoneId={zone} />}
         </AnimatedCircle>
       </Link>
     </motion.div>

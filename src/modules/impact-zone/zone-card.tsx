@@ -1,11 +1,19 @@
 import React from "react";
 import Flex from "@chakra-ui/core/dist/Flex";
 import Box from "@chakra-ui/core/dist/Box";
+import { useRecoilValue } from "recoil";
+import { activeZone } from "./state";
 
 interface ZoneCardProps {
-  zone: string;
+  zoneId: string;
 }
-export const ZoneCard: React.FC<ZoneCardProps> = ({ zone }) => {
+export const ZoneCard: React.FC<ZoneCardProps> = ({ zoneId }) => {
+  const zone = useRecoilValue(activeZone);
+
+  if (!zone) {
+    return null;
+  }
+
   return (
     <Flex
       direction="column"
@@ -13,7 +21,9 @@ export const ZoneCard: React.FC<ZoneCardProps> = ({ zone }) => {
       justifyItems="center"
       alignItems="center"
     >
-      <Box>ZoneCard: {zone}</Box>
+      <Box>
+        {zoneId}: {zone.title}
+      </Box>
     </Flex>
   );
 };

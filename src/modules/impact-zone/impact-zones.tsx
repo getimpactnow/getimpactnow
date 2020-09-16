@@ -1,7 +1,7 @@
 import React from "react";
 import Flex from "@chakra-ui/core/dist/Flex";
 import { useRecoilState } from "recoil";
-import { impactZone, impactZones } from "./state";
+import { activeZoneId, impactZones } from "./state";
 import { Avatar } from "../../components/atoms/avatar";
 import { Route, RouteComponentProps } from "react-router-dom";
 import { Zone } from "./zone";
@@ -9,8 +9,7 @@ import { Zone } from "./zone";
 export const ImpactZones: React.FC<RouteComponentProps<{ id: string }>> = ({
   match,
 }) => {
-  const [, setZone] = useRecoilState(impactZone);
-  console.log(">> ImpactZones");
+  const [, setZone] = useRecoilState(activeZoneId);
 
   return (
     <Flex
@@ -27,10 +26,7 @@ export const ImpactZones: React.FC<RouteComponentProps<{ id: string }>> = ({
           key={zone.zone}
           top={zone.top}
           size={zone.size}
-          onClick={() => {
-            console.log(">> onClick", { zone: zone.zone });
-            setZone(zone.zone);
-          }}
+          onClick={() => setZone(zone.zone)}
           backgroundColor={zone.color}
         />
       ))}
