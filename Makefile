@@ -1,5 +1,7 @@
 all: webpack start_local_ic create_canister build_canister install_canister
 
+test: start_local_ic build_canister reinstall_canister
+
 reinstall: build_canister install_canister
 
 reinstall_backend: build_backend install_canister_backend
