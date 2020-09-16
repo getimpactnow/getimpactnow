@@ -13,30 +13,32 @@ enum Zones {
   union = "union",
 }
 
+const HEADER_SPACING = 3;
+
 const impactZones = [
   {
     range: Zones.union,
     size: 500,
     color: "sky.900",
-    top: "1rem",
+    top: `${1 + HEADER_SPACING}rem`,
   },
   {
     range: Zones.nation,
     size: 400,
     color: "pink.900",
-    top: "2rem",
+    top: `${2 + HEADER_SPACING}rem`,
   },
   {
     range: Zones.state,
     size: 300,
     color: "cobalt.900",
-    top: "3rem",
+    top: `${3 + HEADER_SPACING}rem`,
   },
   {
     range: Zones.region,
     size: 200,
     color: "lilac.900",
-    top: "4rem",
+    top: `${4 + HEADER_SPACING}rem`,
   },
 ];
 
