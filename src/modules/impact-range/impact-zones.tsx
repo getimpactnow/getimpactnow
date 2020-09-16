@@ -46,6 +46,7 @@ export const ImpactZones: React.FC<RouteComponentProps<{ id: string }>> = ({
   match,
 }) => {
   const [, setZone] = useRecoilState(impactZone);
+  console.log(">> ImpactZones");
 
   return (
     <Flex
