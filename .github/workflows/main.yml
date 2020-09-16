@@ -21,6 +21,14 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - name: "install dfx"
+        run: |
+          wget https://sdk.dfinity.org/install.sh
+          echo DFX_VERSION=0.6.7
+          yes Y | DFX_VERSION=0.6.7 sh install.sh
+          echo "::add-path::/home/runner/bin"
+      - name: "dfx cache install"
+        run: dfx cache install
       - uses: borales/actions-yarn@v2.0.0
         with:
           cmd: install # will run `yarn install` command
