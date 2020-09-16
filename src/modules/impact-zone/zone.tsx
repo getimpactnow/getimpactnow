@@ -1,5 +1,6 @@
 import React from "react";
 import { BoxProps } from "@chakra-ui/core/dist/Box";
+import Text from "@chakra-ui/core/dist/Text";
 import { Link } from "react-router-dom";
 import { AnimatedCircle } from "../../components/atoms/circle-animated";
 import { motion, MotionProps } from "framer-motion";
@@ -23,7 +24,9 @@ export const Zone: React.FC<
           boxShadow="0px 0px 4px 2px rgba(0,0,0,0.25)"
           {...animatedCircleProps}
           borderRadius={isSelected ? "0" : "50%"}
-        />
+        >
+          {isSelected && <Text>CardContent</Text>}
+        </AnimatedCircle>
       </Link>
     </motion.div>
   );

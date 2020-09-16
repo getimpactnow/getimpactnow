@@ -1,7 +1,7 @@
 import React from "react";
 import Flex from "@chakra-ui/core/dist/Flex";
 
-import { ImpactSelector } from "../../modules/impact-range";
+import { ImpactSelector } from "../../modules/impact-zone";
 import { TextBrand } from "../../components/atoms/brand";
 
 export const Profile: React.FC = () => {
