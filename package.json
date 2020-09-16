@@ -52,7 +52,7 @@
     "@types/react-router-dom": "5.1.5",
     "chokidar": "3.4.2",
     "framer-motion": "2.6.13",
-    "typescript": "~3.7.2",
+    "typescript": "~4.0.2",
     "webpack-cli": "^3.3.12"
   }
 }
