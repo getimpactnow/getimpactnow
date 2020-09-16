@@ -53,6 +53,7 @@ export const ImpactZones: React.FC<RouteComponentProps<{ id: string }>> = ({
       flexDir="column"
       justifyItems="center"
       alignItems="center"
+      width="100%"
       height={600}
     >
       {impactZones.map((zone) => (
@@ -60,9 +61,10 @@ export const ImpactZones: React.FC<RouteComponentProps<{ id: string }>> = ({
           isSelected={match.params.id === zone.range}
           id={zone.range}
           key={zone.range}
-          top={match.params.id === zone.range ? 0 : zone.top}
+          top={zone.top}
           size={zone.size}
           onClick={() => {
+            console.log(">> onClick", { zone: zone.range });
             setZone(zone.range);
           }}
           backgroundColor={zone.color}

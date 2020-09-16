@@ -18,6 +18,7 @@ export const ColorModeWrapper: React.FC<BoxProps> = ({
       color={theme[colorMode].color}
       height="100vh"
       width="100vw"
+      overflow="hidden"
       {...boxProps}
     >
       {children}

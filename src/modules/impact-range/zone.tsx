@@ -1,16 +1,23 @@
 import React from "react";
-import Box, { BoxProps } from "@chakra-ui/core/dist/Box";
+import { BoxProps } from "@chakra-ui/core/dist/Box";
 import { Link } from "react-router-dom";
 import { AnimatedCircle } from "../../components/atoms/circle-animated";
-import { MotionProps, useMotionValue } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
+// import { openSpring, closeSpring } from "./animations";
 
 export const Zone: React.FC<
-  BoxProps & MotionProps & { isSelected: boolean; id: string; size: number }
+  BoxProps &
+    MotionProps & { isSelected: boolean; id: string; size: number; top: string }
 > = ({ isSelected, id, size, onClick, top, ...animatedCircleProps }) => {
-  const zIndex = useMotionValue(isSelected ? 2 : 0);
-  console.log(">> ", { zIndex, size, isSelected });
+  const topPosition = isSelected ? 0 : top;
+  const zIndex = isSelected ? 1 : 0;
+
+  console.log(">> Zone", { zIndex, isSelected });
   return (
-    <Box position="absolute" display="flex" top={top}>
+    <motion.div
+      style={{ top: topPosition, position: "absolute", zIndex }}
+      // layoutTransition={isSelected ? openSpring : closeSpring}
+    >
       <Link onClick={onClick} to={isSelected ? "/profile" : `/profile/${id}`}>
         <AnimatedCircle
           isSelected={isSelected}
@@ -20,6 +27,6 @@ export const Zone: React.FC<
           borderRadius={isSelected ? "0" : "50%"}
         />
       </Link>
-    </Box>
+    </motion.div>
   );
 };
