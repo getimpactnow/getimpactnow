@@ -20,6 +20,7 @@ export const Zone: React.FC<
           isSelected={isSelected}
           width={isSelected ? "100vw" : size}
           height={isSelected ? "100vh" : size}
+          boxShadow="0px 0px 4px 2px rgba(0,0,0,0.25)"
           {...animatedCircleProps}
           borderRadius={isSelected ? "0" : "50%"}
         />
