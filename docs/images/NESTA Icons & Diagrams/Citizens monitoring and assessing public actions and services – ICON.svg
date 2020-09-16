@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 51 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-1.13687e-13,-807.391)">
+        <g id="Citizens-monitoring-and-assessing-public-actions-and-services---ICON" serif:id="Citizens monitoring and assessing public actions and services – ICON" transform="matrix(0.784615,0,0,0.799632,-221.262,784.025)">
+            <rect x="282" y="29.221" width="65" height="63.779" style="fill:none;"/>
+            <clipPath id="_clip1">
+                <rect x="282" y="29.221" width="65" height="63.779"/>
+            </clipPath>
+            <g clip-path="url(#_clip1)">
+                <g id="Citizens-monitoring-public-actions-Icon" serif:id="Citizens monitoring public actions Icon" transform="matrix(1.27451,0,0,1.25057,-964.426,-284.344)">
+                    <g transform="matrix(1,0,0,1,1011.11,280.14)">
+                        <path d="M0,-20.074C-2.686,-20.216 -5.262,-19.306 -7.256,-17.512C-9.249,-15.718 -10.425,-13.251 -10.566,-10.566C-10.708,-7.881 -9.798,-5.304 -8.005,-3.31C-6.211,-1.317 -3.744,-0.141 -1.058,0C1.627,0.142 4.204,-0.768 6.197,-2.561C8.191,-4.355 9.366,-6.822 9.508,-9.508C9.649,-12.193 8.74,-14.77 6.946,-16.763C5.152,-18.757 2.685,-19.932 0,-20.074" style="fill:rgb(176,164,106);fill-rule:nonzero;"/>
+                    </g>
+                    <g transform="matrix(1,0,0,1,1024.33,301.749)">
+                        <path d="M0,-51.024L-41.721,-51.024C-44.29,-51.024 -46.372,-48.942 -46.372,-46.373L-46.372,-4.652C-46.372,-2.083 -44.29,0 -41.721,0L0,0C2.569,0 4.651,-2.083 4.651,-4.652L4.651,-46.373C4.651,-48.942 2.569,-51.024 0,-51.024M0.378,-30.9C0.179,-27.124 -1.475,-23.654 -4.28,-21.131C-7.084,-18.607 -10.708,-17.327 -14.485,-17.527C-17.507,-17.686 -20.331,-18.779 -22.632,-20.645L-26.329,-17.283L-25.874,-16.779C-25.55,-16.421 -25.576,-15.869 -25.933,-15.549L-37.278,-5.461C-37.633,-5.142 -38.181,-5.173 -38.503,-5.53L-41.892,-9.277C-42.217,-9.635 -42.19,-10.187 -41.833,-10.507L-30.488,-20.595C-30.133,-20.913 -29.585,-20.883 -29.263,-20.526L-28.823,-20.04L-25.191,-23.342C-29.388,-29.12 -28.626,-37.279 -23.202,-42.159C-20.398,-44.683 -16.774,-45.963 -12.996,-45.764C-9.219,-45.564 -5.75,-43.91 -3.226,-41.106C-0.703,-38.302 0.577,-34.678 0.378,-30.9" style="fill:rgb(176,164,106);fill-rule:nonzero;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
