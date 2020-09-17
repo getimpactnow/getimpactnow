@@ -3,10 +3,9 @@ import Utils "./utils";
 import Database "./database";
 import Types "./types";
 
-type Issue = Types.Issue;
-
 actor GetImpactNow {
   var db: Database.IssueDB = Database.IssueDB();
+  type Issue = Types.Issue;
 
   // public query func getIssue(id: Nat): async ?Utils.ImmutableIssue {
   //   let issue = db.findOne(id);
