@@ -9,7 +9,7 @@ import { Zone } from "./zone";
 export const ImpactZones: React.FC<RouteComponentProps<{ id: string }>> = ({
   match,
 }) => {
-  const [zone, setZone] = useRecoilState(activeZoneId);
+  const [, setZone] = useRecoilState(activeZoneId);
 
   return (
     <Flex
@@ -30,7 +30,7 @@ export const ImpactZones: React.FC<RouteComponentProps<{ id: string }>> = ({
           backgroundColor={zone.color}
         />
       ))}
-      {!zone && <Avatar top={"4rem"} width={100} height={100} zIndex={3} />}
+      <Avatar top={"4rem"} width={100} height={100} />
     </Flex>
   );
 };

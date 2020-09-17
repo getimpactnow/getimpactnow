@@ -17,8 +17,8 @@ module {
     let hashMap = HashMap.HashMap<Nat, Types.Issue>(1, isEq, keyHash);
     public var nextIssueId = 1;
 
-    public func createOne(id: IssueId, description: Text) {
-      hashMap.put(id, makeIssue(id, description));
+    public func createOne(id: IssueId, title: Text, description: Text, state: Text, zone: Text) {
+      hashMap.put(id, makeIssue(id, title, description, state, zone));
       nextIssueId += 1;
     };
 
@@ -38,22 +38,27 @@ module {
       issues
     };
 
-    public func createDebate(issueId: Nat, thesis: Text) {
-      let issue = findOne(issueId);
-      Option.iterate(issue, func(actualIssue : Types.Issue) {
-        actualIssue.debates.put(
-          actualIssue.nextDebateId,
-          makeDebate(actualIssue.nextDebateId, thesis)
-        );
-      });
-    };
+    // FIXME: optional types are killing me
+    // public func createDebate(issueId: Nat, thesis: Text) {
+    //   let issue = findOne(issueId);
+    //   Option.iterate(issue, func(actualIssue : Types.Issue) {
+    //     actualIssue.debates.put(
+    //       actualIssue.nextDebateId,
+    //       makeDebate(actualIssue.nextDebateId, thesis)
+    //     );
+    //   });
+    // };
 
-    func makeIssue(issueId: Nat, newDescription: Text): Types.Issue {
+    func makeIssue(issueId: Nat, newTitle: Text, newDescription: Text, newState: Text, newZone: Text): Types.Issue {
       {
         id = issueId: Nat;
+        title = newTitle: Text;
         description = newDescription: Text;
+        state = newState;
+        zone = newZone;
         nextDebateId = 1;
-        debates = HashMap.HashMap<Nat, Types.Debate>(1, isEq, keyHash);
+        // FIXME: optional types are killing me
+        // debates = HashMap.HashMap<Nat, Types.Debate>(1, isEq, keyHash);
       }
     };
 

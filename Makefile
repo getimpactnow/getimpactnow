@@ -8,7 +8,7 @@ reinstall_backend: build_backend install_canister_backend
 reinstall_frontend: build_frontend install_canister_frontend
 
 build_backend:
-	dfx build --skip-frontend
+	dfx build issue
 
 build_frontend:
 	dfx build getimpactnow_assets
@@ -20,7 +20,7 @@ create_canister:
 	dfx canister create --all
 	
 install_canister_backend:
-	dfx canister install get_impact_now -m reinstall
+	dfx canister install issue -m reinstall
 
 install_canister_frontend:
 	dfx canister install getimpactnow_assets -m reinstall

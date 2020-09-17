@@ -8,7 +8,10 @@ type Debate = {
 
 type Issue = {
      id: Nat;
+     title: Text;
      description: Text;
+     state: Text;
+     zone: Text;
      nextDebateId: Nat;
-     debates: HashMap.HashMap<Nat, Debate>;
+     // debates: HashMap.HashMap<Nat, Debate>;
 };
