@@ -22,8 +22,12 @@
     "local": {
       "bind": "127.0.0.1:8888",
       "type": "ephemeral"
+    },
+    "tungsten": {
+      "providers": ["https://gw.dfinity.network"],
+      "type": "persistent"
     }
   },
-  "dfx": "0.6.7",
+  "dfx": "0.6.8",
   "version": 1
 }
