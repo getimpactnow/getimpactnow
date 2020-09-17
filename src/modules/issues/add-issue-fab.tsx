@@ -12,7 +12,7 @@ export const AddIssueFab: React.FC<AddIssueFabProps> = ({ onUpdate }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Fab position="absolute" bottom="3rem" right="3rem" onClick={onOpen}>
+      <Fab position="absolute" bottom="5rem" right="1rem" onClick={onOpen}>
         <Icon name="add" />
       </Fab>
       <AddIssueModal isOpen={isOpen} onClose={onClose} onUpdate={onUpdate} />

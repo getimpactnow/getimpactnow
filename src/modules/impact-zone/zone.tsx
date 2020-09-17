@@ -1,12 +1,9 @@
 import React from "react";
 import { BoxProps } from "@chakra-ui/core/dist/Box";
-import Text from "@chakra-ui/core/dist/Text";
 import { Link } from "react-router-dom";
 import { AnimatedCircle } from "../../components/atoms/circle-animated";
 import { motion, MotionProps } from "framer-motion";
 import { ZoneCard } from "./zone-card";
-import { useRecoilValue } from "recoil";
-import { activeZone } from "./state";
 import { ZoneTitle } from "./zone-title";
 // import { openSpring, closeSpring } from "./animations";
 
@@ -19,13 +16,12 @@ export const Zone: React.FC<
       top: string;
     }
 > = ({ isSelected, zone, size, onClick, top, ...animatedCircleProps }) => {
-  const thezone = useRecoilValue(activeZone);
   const topPosition = isSelected ? 0 : top;
   const zIndex = isSelected ? 1 : 0;
 
   return (
     <motion.div style={{ top: topPosition, position: "absolute", zIndex }}>
-      <Link onClick={onClick} to={isSelected ? "/profile" : `/profile/${zone}`}>
+      <Link onClick={onClick} to={`/${zone}`}>
         <AnimatedCircle
           display="flex"
           flexDirection="column"

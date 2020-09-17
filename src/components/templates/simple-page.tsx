@@ -32,11 +32,11 @@ const SimplePage: React.FunctionComponent<LayoutProps> = ({
           content="18792fff6d719b3c8f085df6d777ef90"
         />
       </Helmet>
+      <CSSReset />
 
       <ColorModeProvider>
         <ColorModeWrapper>{children}</ColorModeWrapper>
       </ColorModeProvider>
-      <CSSReset />
     </ThemeProvider>
   );
 };

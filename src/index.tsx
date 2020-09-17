@@ -2,11 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { render } from "react-dom";
 import { ThemeProvider, theme, CSSReset } from "@chakra-ui/core";
-import { Home } from "./pages/home";
-import { IssuePage } from "./pages/home/issue";
 import { RecoilRoot } from "recoil";
-import Text from "@chakra-ui/core/dist/Text";
-import BasePageTemplate from "./components/templates/menu-page-template";
 import { Profile } from "./pages/profile";
 import SimplePage from "./components/templates/simple-page";
 
@@ -17,25 +13,10 @@ const GetImpactNow: React.FC = () => {
         <CSSReset />
         <Router>
           <Switch>
-            <Route exact path="/">
-              <BasePageTemplate>
-                <Home />
-              </BasePageTemplate>
-            </Route>
-            <Route path="/profile">
+            <Route path="/">
               <SimplePage>
                 <Profile />
               </SimplePage>
-            </Route>
-            <Route path="/politician">
-              <BasePageTemplate>
-                <Text>Politician</Text>
-              </BasePageTemplate>
-            </Route>
-            <Route path="/issues/:issueId">
-              <BasePageTemplate>
-                <IssuePage />
-              </BasePageTemplate>
             </Route>
           </Switch>
         </Router>
@@ -44,4 +25,9 @@ const GetImpactNow: React.FC = () => {
   );
 };
 
-render(<GetImpactNow />, document.getElementById("root"));
+render(
+  <GetImpactNow />,
+  document.getElementById(
+    process.env.NODE_ENV === "development" ? "root" : "app"
+  )
+);

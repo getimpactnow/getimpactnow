@@ -14,11 +14,14 @@ export const AnimatedCircle: React.FC<
     <MotionCircle
       // layoutTransition={isSelected ? openSpring : closeSpring}
       children={children}
-      whileHover={{
-        scale: 1.01,
-        borderColor: "rgba(255, 255, 255, 1)",
-      }}
-      whileTap={{ scale: 0.99, borderColor: "rgba(255, 255, 255, 1)" }}
+      whileHover={
+        !isSelected
+          ? {
+              scale: 1.01,
+            }
+          : {}
+      }
+      whileTap={!isSelected ? { scale: 0.99 } : {}}
       border="1px"
       borderColor="whiteAlpha.300"
       {...animatedCircleProps}

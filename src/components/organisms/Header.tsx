@@ -62,9 +62,7 @@ const HeaderNav: React.FC = (props) => {
         flexGrow={1}
         onClick={handleToggle}
       >
-        <MenuItems href={`/`}>Home</MenuItems>
-        <MenuItems href="/profile">Profile</MenuItems>
-        <MenuItems href="/politician">Politician</MenuItems>
+        <MenuItems href="/">Profile</MenuItems>
       </Box>
     </Flex>
   );
