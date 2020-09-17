@@ -31,8 +31,8 @@ reinstall_canister:
 install_canister:
 	dfx canister install --all
 
-open_frontend:
-	open http://localhost:8000/?canisterId=$(shell dfx canister id get_impact_now_assets)
+get_frontend_url:
+	@echo http://localhost:8888/?canisterId=$(shell dfx canister id getimpactnow_assets)
 
 webpack: node_modules/.bin/webpack
 node_modules/.bin/webpack:
@@ -44,8 +44,9 @@ start_local_ic: dfx
 
 clean:
 	dfx stop
-	rm -rf .dfx
+	rm -rf .dfx build dist node_modules
 	dfx start --clean --background
+	yarn
 	make create_canister
 	make build_canister
 	make install_canister
