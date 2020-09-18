@@ -22,6 +22,8 @@ The Policy of the Future is Made by All of Us. We ([get.impact.now][gin]) is
 building a digital Platform which enables responsible Citizen to Be Part of the
 Decision-Making Process.
 
+![get.impact.now platform](./docs/images/presentation.png)
+
 As such a Platform must not be controlled by any central party, we'll build it
 on the natural evolution of the internet called the Internet Computer (IC). The
 IC is build by a [Foundation called DFINITY](https://dfinity.org/foundation):
