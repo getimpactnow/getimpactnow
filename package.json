@@ -14,7 +14,7 @@
     "react-helmet": "6.1.0",
     "react-router-dom": "5.2.0",
     "react-scripts": "3.4.3",
-    "recoil": "0.0.10"
+    "recoil": "0.0.13"
   },
   "scripts": {
     "start": "NODE_ENV=development && craco start",
